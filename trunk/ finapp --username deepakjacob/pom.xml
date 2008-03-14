@@ -23,7 +23,7 @@
         </dependency>
         -->
         <dependency>
-           <groupId>org.directwebremoting</groupId>
+            <groupId>org.directwebremoting</groupId>
             <artifactId>dwr</artifactId>
             <version>2.0.1</version>
         </dependency>
@@ -126,7 +126,7 @@
                     <scanIntervalSeconds>3</scanIntervalSeconds>
                     <scanTargetPatterns>
                         <scanTargetPattern>
-                            <directory>src/main/webapp/WEB-INF</directory>
+                            <directory>src/main/java</directory>
                             <excludes>
                                 <exclude>**/*.jsp</exclude>
                             </excludes>
