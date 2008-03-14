@@ -12,7 +12,7 @@
 
     <script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/Employee.js"></script>
-    
+
 
     <!-- Ext dependencies -->
     <script type="text/javascript"
@@ -21,13 +21,12 @@
 
     <!-- Ext extension dependencies -->
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/external/ext-extensions/dwrProxy.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/js/external/ext-extensions/objectReader.js"></script>
+    <script type="text/javascript"
+            src="<%=request.getContextPath()%>/js/external/ext-extensions/objectReader.js"></script>
 
     <!-- DWR dependencies -->
     <script type="text/javascript"
             src="<%=request.getContextPath()%>/js/external/ext-extensions/finappJsonGrid.js"></script>
-
-        
 
 
 </head>
