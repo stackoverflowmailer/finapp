@@ -32,6 +32,7 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
                 <prop key="/dwr/**">dwrController</prop>
 
                 <prop key="/testDWRPage.html">testDWRController</prop>
+                <prop key="/testDWRPageWithFilter.html">testDWRControllerWithFilter</prop>
 
             </props>
         </property>
@@ -51,6 +52,8 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
     <bean name="testDWRController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="testDWRPage"/>
+    <bean name="testDWRControllerWithFilter" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="testDWRPageWithFilter"/>
 
     <dwr:controller id="dwrController" debug="true"/>
 
@@ -74,6 +77,8 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
     <bean id="employeeService" class="com.dj.app.EmployeeServiceImpl" lazy-init="false">
         <dwr:remote javascript="Employee">
             <dwr:include method="getAllEmployees"/>
+            <dwr:include method="getEmployeeWithName"/>
+            <dwr:include method="getEmployee"/>
         </dwr:remote>
     </bean>
 
