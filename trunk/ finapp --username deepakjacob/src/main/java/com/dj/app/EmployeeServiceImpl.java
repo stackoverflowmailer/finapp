@@ -30,4 +30,28 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return empList;
     }
+
+    public List<Employee> getEmployeeWithName(String name) {
+        Employee employee = null;
+        List<Employee> empList = new ArrayList<Employee>();
+        if (name.equals("Deepak")) {
+            employee = new Employee(new Long(1), "Deepak", "Jacob", new BigDecimal("100000.33"));
+        } else {
+            employee = new Employee(new Long(2), "Mukesh", "Dubey", new BigDecimal("100000.33"));
+        }
+        empList.add(employee);
+        return empList;
+    }
+
+    public Employee getEmployee(String name) {
+        Employee employee = null;
+        if (name.equals("Deepak")) {
+            employee = new Employee(new Long(1), "Deepak", "Jacob", new BigDecimal("100000.33"));
+        } else {
+            employee = new Employee(new Long(2), "Mukesh", "Dubey", new BigDecimal("100000.33"));
+        }
+        return employee;
+    }
+
+
 }
