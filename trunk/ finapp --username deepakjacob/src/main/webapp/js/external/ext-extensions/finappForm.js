@@ -44,29 +44,26 @@ Ext.onReady(function() {
         ]
     });
 
-    var myCallback = function(str) {
-        alert('In Callback !' + str);
-    };
-
-
-    var myObject = {
-        dwrFunction: Employee.saveEmployee,
-        callback: myCallback
-    };
-
-    var myHandler = function() {
-        sampleForm.getForm().doAction("dwrsubmit", myObject);
-    }
 
     var submit = sampleForm.addButton({
-
         text: 'Save',
         disable: false,
-        handler: myHandler
+        handler:  function() {
+            sampleForm.getForm().doAction("dwrsubmit", {
+                dwrFunction: Employee.saveEmployee,
+                // this callback will never get called as DWRSubmit is not considering following callback.
+                //DWRSubmit is having it's own callbacks viz. 'success' and 'failure'
+                //to use following callback change DWRSubmit action.
+                callback: function(str) {
+                    alert('In Callback !' + str);
+                }
+            });
+        }
     });
 
     sampleForm.render(document.body);
-});
+})
+        ;
 
 
 
