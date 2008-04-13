@@ -28,20 +28,20 @@
             return Math.max(scrollWidth, this.getViewportWidth());
         },
 
-        getViewportHeight: function(){
-            if(Ext.isIE){
+        getViewportHeight: function() {
+            if (Ext.isIE) {
                 return Ext.isStrict ? document.documentElement.clientHeight :
-                         document.body.clientHeight;
-            }else{
+                       document.body.clientHeight;
+            } else {
                 return self.innerHeight;
             }
         },
 
         getViewportWidth: function() {
-            if(Ext.isIE){
+            if (Ext.isIE) {
                 return Ext.isStrict ? document.documentElement.clientWidth :
-                         document.body.clientWidth;
-            }else{
+                       document.body.clientWidth;
+            } else {
                 return self.innerWidth;
             }
         },
@@ -89,7 +89,7 @@
             var p, pe, b, scroll, bd = (document.body || document.documentElement);
             el = Ext.getDom(el);
 
-            if(el == bd){
+            if (el == bd) {
                 return [0, 0];
             }
 
@@ -99,7 +99,7 @@
                 return [b.left + scroll.left, b.top + scroll.top];
             }
             var x = 0, y = 0;
-            
+
             p = el;
 
             var hasAbsolute = fly(el).getStyle("position") == "absolute";
@@ -115,7 +115,7 @@
 
                 if (Ext.isGecko) {
                     pe = fly(p);
-                    
+
                     var bt = parseInt(pe.getStyle("borderTopWidth"), 10) || 0;
                     var bl = parseInt(pe.getStyle("borderLeftWidth"), 10) || 0;
 
@@ -175,12 +175,12 @@
         }
     };
 
-/*
- * Portions of this file are based on pieces of Yahoo User Interface Library
- * Copyright (c) 2007, Yahoo! Inc. All rights reserved.
- * YUI licensed under the BSD License:
- * http://developer.yahoo.net/yui/license.txt
- */
+    /*
+    * Portions of this file are based on pieces of Yahoo User Interface Library
+    * Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+    * YUI licensed under the BSD License:
+    * http://developer.yahoo.net/yui/license.txt
+    */
     Ext.lib.Event = function() {
         var loadComplete = false;
         var listeners = [];
@@ -257,7 +257,7 @@
 
                 el = Ext.getDom(el);
 
-                if(!fn) {
+                if (!fn) {
                     return this.purgeElement(el, false, eventName);
                 }
 
@@ -408,7 +408,7 @@
 
             preventDefault: function(ev) {
                 ev = ev.browserEvent || ev;
-                if(ev.preventDefault) {
+                if (ev.preventDefault) {
                     ev.preventDefault();
                 } else {
                     ev.returnValue = false;
@@ -691,20 +691,20 @@
 
     Ext.lib.Ajax = {
         request : function(method, uri, cb, data, options) {
-            if(options){
+            if (options) {
                 var hs = options.headers;
-                if(hs){
-                    for(var h in hs){
-                        if(hs.hasOwnProperty(h)){
+                if (hs) {
+                    for (var h in hs) {
+                        if (hs.hasOwnProperty(h)) {
                             this.initHeader(h, hs[h], false);
                         }
                     }
                 }
-                if(options.xmlData){
+                if (options.xmlData) {
                     this.initHeader('Content-Type', 'text/xml', false);
                     method = 'POST';
                     data = options.xmlData;
-                }else if(options.jsonData){
+                } else if (options.jsonData) {
                     this.initHeader('Content-Type', 'text/javascript', false);
                     method = 'POST';
                     data = typeof options.jsonData == 'object' ? Ext.encode(options.jsonData) : options.jsonData;
@@ -715,7 +715,7 @@
         },
 
         serializeForm : function(form) {
-            if(typeof form == 'string') {
+            if (typeof form == 'string') {
                 form = (document.getElementById(form) || document.forms[form]);
             }
 
@@ -726,7 +726,7 @@
                 name = form.elements[i].name;
                 val = form.elements[i].value;
 
-                if (!disabled && name){
+                if (!disabled && name) {
                     switch (el.type)
                             {
                         case 'select-one':
@@ -758,7 +758,7 @@
 
                             break;
                         case 'submit':
-                            if(hasSubmit == false) {
+                            if (hasSubmit == false) {
                                 data += encodeURIComponent(name) + '=' + encodeURIComponent(val) + '&';
                                 hasSubmit = true;
                             }
@@ -886,11 +886,11 @@
                     }
                 }
 
-                if(postData && this.useDefaultHeader){
+                if (postData && this.useDefaultHeader) {
                     this.initHeader('Content-Type', this.defaultPostHeader);
                 }
 
-                 if (this.hasDefaultHeaders || this.hasHeaders) {
+                if (this.hasDefaultHeaders || this.hasHeaders) {
                     this.setHeader(o);
                 }
 
@@ -1154,9 +1154,9 @@
         },
 
         activeX:[
-        'MSXML2.XMLHTTP.3.0',
-        'MSXML2.XMLHTTP',
-        'Microsoft.XMLHTTP'
+            'MSXML2.XMLHTTP.3.0',
+            'MSXML2.XMLHTTP',
+            'Microsoft.XMLHTTP'
         ]
 
 
@@ -1282,7 +1282,7 @@
     }
 
 
-    if(Ext.isIE) {
+    if (Ext.isIE) {
         function fnCleanUp() {
             var p = Function.prototype;
             delete p.createSequence;
@@ -2025,9 +2025,9 @@
         proto.getAttribute = function(attr) {
             if (this.patterns.points.test(attr)) {
                 var val = [
-                        superclass.getAttribute.call(this, 'left'),
-                        superclass.getAttribute.call(this, 'top')
-                        ];
+                    superclass.getAttribute.call(this, 'left'),
+                    superclass.getAttribute.call(this, 'top')
+                ];
             } else {
                 val = superclass.getAttribute.call(this, attr);
             }
@@ -2146,9 +2146,9 @@
 
             if (attr == 'scroll') {
                 val = [
-                        this.method(this.currentFrame, start[0], end[0] - start[0], this.totalFrames),
-                        this.method(this.currentFrame, start[1], end[1] - start[1], this.totalFrames)
-                        ];
+                    this.method(this.currentFrame, start[0], end[0] - start[0], this.totalFrames),
+                    this.method(this.currentFrame, start[1], end[1] - start[1], this.totalFrames)
+                ];
 
             } else {
                 val = superclass.doMethod.call(this, attr, start, end);
