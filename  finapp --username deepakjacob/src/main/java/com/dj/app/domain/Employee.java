@@ -18,6 +18,18 @@ public class Employee {
 
     private BigDecimal salary;
 
+
+    private String emailAddress;
+
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
     public Employee() {
 
     }
@@ -62,4 +74,14 @@ public class Employee {
     }
 
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary +
+                ", emailAddress='" + emailAddress + '\'' +
+                '}';
+    }
 }

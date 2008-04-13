@@ -79,6 +79,7 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
             <dwr:include method="getAllEmployees"/>
             <dwr:include method="getEmployeeWithName"/>
             <dwr:include method="getEmployee"/>
+            <dwr:include method="saveEmployee"/>
         </dwr:remote>
     </bean>
 
