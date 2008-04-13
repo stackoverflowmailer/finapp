@@ -33,7 +33,6 @@
 
 <body>
 <p>This is /WEB-INF/jsp/testDWRPage.jsp</p>
-<a href="javascript:callGetAllEmployees()">Invoke GetAllEmployees DWR</a><br/>
 
 <div id="grid-example"></div>
 
