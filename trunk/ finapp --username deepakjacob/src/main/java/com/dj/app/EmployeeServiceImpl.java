@@ -34,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return empList;
     }
 
-    public Map saveEmployee(Employee employee) {
+    public Map saveEmployee(Employee employee)  {
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Employee : '" + employee);
         System.out.println("Employee Saved !");
@@ -44,7 +44,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         List list = new ArrayList();
         list.add("error2");
         hashMap.put("errors", list);
-        return hashMap;
+        //return hashMap;
+        throw new RuntimeException("Error");
     }
 
     public List<Employee> getEmployeeWithName(String name) {

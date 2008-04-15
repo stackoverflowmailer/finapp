@@ -1,5 +1,3 @@
-
-
 Ext.onReady(function() {
     Ext.QuickTips.init();
     // shared reader
@@ -9,7 +7,7 @@ Ext.onReady(function() {
         {name: 'lastName'},
         {name: 'salary'}
     ]);
-    
+
     var myObjectReader = new Ext.ux.data.ObjectReader({id:"id"}, EmployeeRecord);
 
     var myProxy = new Ext.ux.data.DWRProxy({
