@@ -88,7 +88,8 @@ Ext.extend(Ext.form.Action.DWRSubmit, Ext.form.Action, {
             dwrFunctionArgs.push(this.form.getValues());
             dwrFunctionArgs.push({
                 callback: this.success.createDelegate(this, this.createCallback(), 1),
-                exceptionHandler: this.failure.createDelegate(this, this.createCallback(), 1)
+                errorHandler: this.failure.createDelegate(this, this.createCallback(), 1),
+                timeout : 1000
             });
             this.options.dwrFunction.apply(Object, dwrFunctionArgs);
         } else if (o.clientValidation !== false) { // client validation failed
@@ -111,10 +112,8 @@ Ext.extend(Ext.form.Action.DWRSubmit, Ext.form.Action, {
         this.form.afterAction(this, false);
     },
 
-    failure : function(response) {
-        this.response = response;
-        this.failureType = Ext.form.Action.CONNECT_FAILURE;
-        this.form.afterAction(this, false);
+    failure : function(errorString, exception) {
+        Ext.Msg.alert('Error', errorString + " :  " + exception);
     },
     // private
     handleResponse : function(response) {

@@ -48,6 +48,7 @@ Ext.onReady(function() {
     var submit = sampleForm.addButton({
         text: 'Save',
         disable: false,
+
         handler:  function() {
             sampleForm.getForm().doAction("dwrsubmit", {
                 dwrFunction: Employee.saveEmployee,
@@ -58,12 +59,12 @@ Ext.onReady(function() {
                     alert('In Callback !' + str);
                 }
             });
+
         }
     });
 
     sampleForm.render(document.body);
-})
-        ;
+});
 
 
 
