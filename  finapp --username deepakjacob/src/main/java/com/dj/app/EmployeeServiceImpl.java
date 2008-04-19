@@ -24,7 +24,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public List<Employee> getAllEmployees() {
         List<Employee> empList = new ArrayList<Employee>();
-        //Add employees to the list    
+        //Add employees to the list
         empList.add(new Employee(new Long(1), "Deepak", "Jacob", new BigDecimal("100000.33")));
         empList.add(new Employee(new Long(77), "Mukesh", "Dubey", new BigDecimal("100000.33")));
         empList.add(new Employee(new Long(2), "Pradeep", "K", new BigDecimal("10066600.33")));
@@ -44,8 +44,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         List list = new ArrayList();
         list.add("error2");
         hashMap.put("errors", list);
-        //return hashMap;
-        throw new RuntimeException("Error");
+        return hashMap;
+        //throw new RuntimeException("Error");
     }
 
     public List<Employee> getEmployeeWithName(String name) {
