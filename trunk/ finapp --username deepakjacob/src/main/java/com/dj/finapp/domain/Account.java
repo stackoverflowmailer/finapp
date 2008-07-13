@@ -1,99 +1,109 @@
 package com.dj.finapp.domain;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+@Entity
 public class Account {
+    public enum AccountType {
+        SAVINGS, CURRENT, OTHER;
+    }
 
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    @Column(name = "ACCOUNT_NUMBER")
+    private String accountNumber;
+    @Column(name = "OPEN_DATE")
+    private Date openDate;
+    @Column(name = "CLOSE_DATE")
+    private Date closeDate;
+    @Column(name = "ACTIVE")
+    private boolean active;
+    @Column(name="ACCOUNT_TYPE")
+    private AccountType accountType;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "account")
+    private List<AccountHolder> accountHolders;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Transaction> transactions;
+    @Column(name = "ACCOUNT_BALANCE")
+    private BigDecimal balance;
 
-	private String accountNumber;
+    public Account() {
+    }
 
-	private Date openDate;
+    public Long getId() {
+        return id;
+    }
 
-	private Date closeDate;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	private boolean active;
+    public Date getOpenDate() {
+        return openDate;
+    }
 
-	private AccountType accountType;
+    public void setOpenDate(Date openDate) {
+        this.openDate = openDate;
+    }
 
-	private List<AccountHolder> accountHolders;
+    public Date getCloseDate() {
+        return closeDate;
+    }
 
-	private List<Transaction> transactions;
+    public void setCloseDate(Date closeDate) {
+        this.closeDate = closeDate;
+    }
 
-	private BigDecimal balance;
+    public boolean isActive() {
+        return active;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public AccountType getAccountType() {
+        return accountType;
+    }
 
-	public Date getOpenDate() {
-		return openDate;
-	}
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
+    }
 
-	public void setOpenDate(Date openDate) {
-		this.openDate = openDate;
-	}
+    public List<AccountHolder> getAccountHolders() {
+        return accountHolders;
+    }
 
-	public Date getCloseDate() {
-		return closeDate;
-	}
+    public void setAccountHolders(List<AccountHolder> accountHolders) {
+        this.accountHolders = accountHolders;
+    }
 
-	public void setCloseDate(Date closeDate) {
-		this.closeDate = closeDate;
-	}
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
 
-	public boolean isActive() {
-		return active;
-	}
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
 
-	public void setActive(boolean active) {
-		this.active = active;
-	}
+    public BigDecimal getBalance() {
+        return balance;
+    }
 
-	public AccountType getAccountType() {
-		return accountType;
-	}
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
 
-	public void setAccountType(AccountType accountType) {
-		this.accountType = accountType;
-	}
+    public String getAccountNumber() {
+        return accountNumber;
+    }
 
-	public List<AccountHolder> getAccountHolders() {
-		return accountHolders;
-	}
-
-	public void setAccountHolders(List<AccountHolder> accountHolders) {
-		this.accountHolders = accountHolders;
-	}
-
-	public List<Transaction> getTransactions() {
-		return transactions;
-	}
-
-	public void setTransactions(List<Transaction> transactions) {
-		this.transactions = transactions;
-	}
-
-	public BigDecimal getBalance() {
-		return balance;
-	}
-
-	public void setBalance(BigDecimal balance) {
-		this.balance = balance;
-	}
-
-	public String getAccountNumber() {
-		return accountNumber;
-	}
-
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
-	}
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
 
 }

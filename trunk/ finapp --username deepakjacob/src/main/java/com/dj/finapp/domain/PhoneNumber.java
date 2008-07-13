@@ -1,14 +1,27 @@
 package com.dj.finapp.domain;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Column;
+
+@Embeddable
 public class PhoneNumber {
-
+    @Column(name="COUNTRY_CODE")
 	private String countryCode;
-
+    @Column(name="STATE_CODE")
 	private String stateCode;
-
+    @Column(name="PHONE_NO")
 	private String telNo;
 
-	public String getCountryCode() {
+    public PhoneNumber() {
+    }
+
+    public PhoneNumber(String countryCode, String stateCode, String telNo) {
+        this.countryCode = countryCode;
+        this.stateCode = stateCode;
+        this.telNo = telNo;
+    }
+
+    public String getCountryCode() {
 		return countryCode;
 	}
 

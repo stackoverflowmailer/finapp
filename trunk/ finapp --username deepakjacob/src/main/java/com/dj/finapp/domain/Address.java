@@ -1,34 +1,29 @@
 package com.dj.finapp.domain;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+
+@Embeddable
 public class Address {
-
-	private Long id;
-
-	private String doorNo;
-
+    @Column(name="DOOR_NO")
+    private String doorNo;
+    @Column(name="STREET_NAME")
 	private String streetName;
-
+    @Column(name="AVENUE")
 	private String avenue;
-
+    @Column(name="CITY")
 	private String city;
-
+    @Column(name="STATE")
 	private String state;
-
+    @Column(name="COUNTRY")
 	private String country;
-
+    @Column(name="PIN")
 	private String pin;
-
+    @Embedded
 	private PhoneNumber landlineNo;
-
-	private PhoneNumber mobileNo;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+//    @Embedded
+//	private PhoneNumber mobileNo;
 
 	public String getDoorNo() {
 		return doorNo;
@@ -93,7 +88,7 @@ public class Address {
 	public void setLandlineNo(PhoneNumber landlineNo) {
 		this.landlineNo = landlineNo;
 	}
-
+/*
 	public PhoneNumber getMobileNo() {
 		return mobileNo;
 	}
@@ -101,5 +96,5 @@ public class Address {
 	public void setMobileNo(PhoneNumber mobileNo) {
 		this.mobileNo = mobileNo;
 	}
-
+*/
 }
