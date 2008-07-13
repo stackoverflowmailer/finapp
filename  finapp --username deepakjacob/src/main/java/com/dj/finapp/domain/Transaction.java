@@ -1,17 +1,21 @@
 package com.dj.finapp.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Id;
 import java.math.BigDecimal;
-
+@Entity
 public class Transaction {
-
+    @Id
 	private Long id;
-
+    @Column(name="TXN_DATE")
 	private String date;
-
+    @Column(name="TXN_TYPE")
 	private TransactionType type;
-
+    @Column(name="BALANCE_AFTER_TXN")
 	private BigDecimal balance;
-
+    @Column(name="TXN_REFERENCE")
 	private String reference;
 
 	public Long getId() {

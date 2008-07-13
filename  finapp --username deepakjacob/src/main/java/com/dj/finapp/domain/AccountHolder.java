@@ -1,65 +1,82 @@
 package com.dj.finapp.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class AccountHolder {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    @Column(name = "MAIN_ACCOUNT_HOLDER")
+    private boolean isMainAccountHolder = false;
+    @Column(name = "FIRST_NAME")
+    private String firstName;
+    @Column(name = "LAST_NAME")
+    private String lastName;
+    @Embedded
+    private Address address1;
+    // @Embedded
+    // private Address address2;
 
-	private Long id;
+    @ManyToOne
+    @JoinColumn(name = "ACCOUNT_ID", nullable = false)
+    private Account account;
 
-	private boolean isMainAccountHolder = false;
 
-	private String firstName;
+    public Account getAccount() {
+        return account;
+    }
 
-	private String lastName;
+    public void setAccount(Account account) {
+        this.account = account;
+    }
 
-	private Address address1;
+    public Long getId() {
+        return id;
+    }
 
-	private Address address2;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public boolean isMainAccountHolder() {
+        return isMainAccountHolder;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setMainAccountHolder(boolean isMainAccountHolder) {
+        this.isMainAccountHolder = isMainAccountHolder;
+    }
 
-	public boolean isMainAccountHolder() {
-		return isMainAccountHolder;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setMainAccountHolder(boolean isMainAccountHolder) {
-		this.isMainAccountHolder = isMainAccountHolder;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public Address getAddress1() {
+        return address1;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setAddress1(Address address1) {
+        this.address1 = address1;
+    }
+    /*
+       public Address getAddress2() {
+           return address2;
+       }
 
-	public Address getAddress1() {
-		return address1;
-	}
-
-	public void setAddress1(Address address1) {
-		this.address1 = address1;
-	}
-
-	public Address getAddress2() {
-		return address2;
-	}
-
-	public void setAddress2(Address address2) {
-		this.address2 = address2;
-	}
-
+       public void setAddress2(Address address2) {
+           this.address2 = address2;
+       }
+    */
 }
