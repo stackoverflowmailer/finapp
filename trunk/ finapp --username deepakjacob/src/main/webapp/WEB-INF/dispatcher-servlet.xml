@@ -68,6 +68,14 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
     </dwr:configuration>
 
 
+    <dwr:configuration>
+        <dwr:convert type="bean" class="com.dj.app.domain.User"/>
+    </dwr:configuration>
+    <dwr:configuration>
+        <dwr:convert type="exception" class="com.dj.app.NoSuchUserException"/>
+    </dwr:configuration>
+
+
     <bean id="echo" class="com.dj.app.EchoImpl">
         <dwr:remote javascript="Server">
             <dwr:include method="echo"/>
@@ -80,6 +88,12 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
             <dwr:include method="getEmployeeWithName"/>
             <dwr:include method="getEmployee"/>
             <dwr:include method="saveEmployee"/>
+        </dwr:remote>
+    </bean>
+
+    <bean id="userService" class="com.dj.app.UserServiceImpl" lazy-init="false">
+        <dwr:remote javascript="User">
+            <dwr:include method="checkUserCredentials"/>
         </dwr:remote>
     </bean>
 

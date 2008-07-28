@@ -81,7 +81,7 @@ Ext.extend(Ext.ux.data.DWRProxy, Ext.data.DataProxy, {
                 },
                 exceptionHandler: function(message, exception) {
                     // the event is supposed to pass the response, but since DWR doesn't provide that to us, we pass the message.
-                    dataProxy.fireEvent("loadexception", dataProxy, response, loadCallback, exception);
+                    dataProxy.fireEvent("loadexception", dataProxy, message, loadCallback, exception);
                     loadCallback.call(scope, null, arg, false);
                 }
             });
