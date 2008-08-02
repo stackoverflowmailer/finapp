@@ -11,20 +11,20 @@ import java.util.Date;
  */
 public class User {
     private Long id;
-    private String userName;
+    private String username;             
     private String password;
     private Date joinDate;
-    private Date lastAccessedDate;
+    private Date lastAccessDate;
     private boolean locked;
 
     public User() {
     }
 
-    public User(Long id, String userName, Date joinDate, Date lastAccessedDate, boolean locked) {
+    public User(Long id, String username, Date joinDate, Date lastAccessDate, boolean locked) {
         this.id = id;
-        this.userName = userName;
+        this.username = username;
         this.joinDate = joinDate;
-        this.lastAccessedDate = lastAccessedDate;
+        this.lastAccessDate = lastAccessDate;
         this.locked = locked;
     }
 
@@ -36,12 +36,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -60,12 +60,12 @@ public class User {
         this.joinDate = joinDate;
     }
 
-    public Date getLastAccessedDate() {
-        return lastAccessedDate;
+    public Date getLastAccessDate() {
+        return lastAccessDate;
     }
 
-    public void setLastAccessedDate(Date lastAccessedDate) {
-        this.lastAccessedDate = lastAccessedDate;
+    public void setLastAccessDate(Date lastAccessDate) {
+        this.lastAccessDate = lastAccessDate;
     }
 
     public boolean isLocked() {

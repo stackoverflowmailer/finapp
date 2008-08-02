@@ -41,8 +41,8 @@ Ext.EventManager.on(window, 'load', function() {
         defaultType : 'textfield',
         border : false,
 		items : [{
-			fieldLabel : 'Userame',
-			name : 'userName',
+			fieldLabel : 'Username',
+			name : 'username',
 			allowBlank : false
 		}, {
 			fieldLabel : 'Password',
@@ -55,11 +55,9 @@ Ext.EventManager.on(window, 'load', function() {
 		disable : false,
 
         handler : function() {
-            //loginForm.getForm().reader = new Ext.ux.data.ObjectReader();
             loginForm.getForm().doAction("dwrsubmit", {
                 clientValidation:false,
                 dwrFunction : User.checkUserCredentials,
-                
                 waitMsg: "Checking user credentials, Please wait...",
 
                 success : function(str) {
