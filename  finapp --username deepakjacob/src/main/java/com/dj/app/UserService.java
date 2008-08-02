@@ -1,8 +1,11 @@
 package com.dj.app;
 
 import com.dj.app.domain.User;
+import com.dj.app.domain.Response;
+import com.dj.app.domain.EXTFormSubmitResponse;
 
 import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,6 +15,6 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public interface UserService {
-    public User checkUserCredentials(User user) throws NoSuchUserException;
+    public Response checkUserCredentials(User user) throws NoSuchUserException;
 
 }

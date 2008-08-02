@@ -74,6 +74,10 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
     <dwr:configuration>
         <dwr:convert type="exception" class="com.dj.app.NoSuchUserException"/>
     </dwr:configuration>
+    <dwr:configuration>
+        <dwr:convert type="bean" class="com.dj.app.domain.EXTFormSubmitResponse">
+        </dwr:convert>
+    </dwr:configuration>
 
 
     <bean id="echo" class="com.dj.app.EchoImpl">

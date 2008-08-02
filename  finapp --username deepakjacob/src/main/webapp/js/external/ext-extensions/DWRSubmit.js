@@ -136,24 +136,6 @@ Ext.extend(Ext.form.Action.DWRSubmit, Ext.form.Action, {
     },
     // private
     handleResponse : function(response) {
-        if (this.form.errorReader) {
-            var rs = this.form.errorReader.read([response]);
-            var errors = [];
-            if (rs.records) {
-                for (var i = 0, len = rs.records.length; i < len; i++) {
-                    var r = rs.records[i];
-                    errors[i] = r.data;
-                }
-            }
-            if (errors.length < 1) {
-                errors = null;
-            }
-            this.result = {
-                success : rs.success,
-                errors : errors
-            };
-            return this.result;
-        }
         this.result = response;
         return this.result;
     }

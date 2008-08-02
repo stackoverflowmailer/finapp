@@ -21,97 +21,73 @@
           <setting name="BUILD_ONLY_WEB_RESOURCES" value="false" />
         </building>
         <packaging>
-          <containerElement type="library" name="org.directwebremoting:dwr:2.0.2" level="module">
+          <containerElement type="module" name="finapp">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/dwr-2.0.2.jar" />
+            <attribute name="URI" value="/WEB-INF/classes" />
           </containerElement>
-          <containerElement type="library" name="org.springframework:spring-web:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-web-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="commons-logging:commons-logging:1.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/commons-logging-1.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.springframework:spring-beans:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-beans-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.springframework:spring-core:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-core-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.springframework:spring-context:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-context-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="aopalliance:aopalliance:1.0" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/aopalliance-1.0.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.springframework:spring-webmvc-portlet:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-webmvc-portlet-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.springframework:spring-webmvc:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-webmvc-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.springframework:spring-context-support:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-context-support-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.springframework:spring-aop:2.5.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/spring-aop-2.5.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="javax.persistence:persistence-api:1.0" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/persistence-api-1.0.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.hibernate:hibernate:3.2.2.ga" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/hibernate-3.2.2.ga.jar" />
-          </containerElement>
-          <containerElement type="library" name="net.sf.ehcache:ehcache:1.2.3" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/ehcache-1.2.3.jar" />
-          </containerElement>
-          <containerElement type="library" name="commons-collections:commons-collections:2.1.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/commons-collections-2.1.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="javax.transaction:jta:1.0.1B" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/jta-1.0.1B.jar" />
-          </containerElement>
-          <containerElement type="library" name="asm:asm-attrs:1.5.3" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/asm-attrs-1.5.3.jar" />
-          </containerElement>
-          <containerElement type="library" name="dom4j:dom4j:1.6.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/dom4j-1.6.1.jar" />
+          <containerElement type="library" name="ant:ant:1.6.5" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
           </containerElement>
           <containerElement type="library" name="antlr:antlr:2.7.6" level="module">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/antlr-2.7.6.jar" />
           </containerElement>
-          <containerElement type="library" name="cglib:cglib:2.1_3" level="module">
+          <containerElement type="library" name="aopalliance:aopalliance:1.0" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/cglib-2.1_3.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/aopalliance-1.0.jar" />
+          </containerElement>
+          <containerElement type="library" name="asm:asm-attrs:1.5.3" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/asm-attrs-1.5.3.jar" />
           </containerElement>
           <containerElement type="library" name="asm:asm:1.5.3" level="module">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/asm-1.5.3.jar" />
           </containerElement>
-          <containerElement type="library" name="org.hibernate:hibernate-annotations:3.2.1.ga" level="module">
+          <containerElement type="library" name="c3p0:c3p0:0.9.1" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/hibernate-annotations-3.2.1.ga.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/c3p0-0.9.1.jar" />
           </containerElement>
-          <containerElement type="library" name="org.hibernate:hibernate-entitymanager:3.2.1.ga" level="module">
+          <containerElement type="library" name="cglib:cglib:2.1_3" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/hibernate-entitymanager-3.2.1.ga.jar" />
+            <attribute name="URI" value="/WEB-INF/lib/cglib-2.1_3.jar" />
+          </containerElement>
+          <containerElement type="library" name="commons-collections:commons-collections:2.1.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/commons-collections-2.1.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="commons-logging:commons-logging:1.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/commons-logging-1.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="dom4j:dom4j:1.6.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/dom4j-1.6.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="flexjson:flexjson:1.6" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/flexjson-1.6.jar" />
+          </containerElement>
+          <containerElement type="library" name="freemarker:freemarker:2.3.4" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/freemarker-2.3.4.jar" />
+          </containerElement>
+          <containerElement type="library" name="javax.persistence:persistence-api:1.0" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/persistence-api-1.0.jar" />
+          </containerElement>
+          <containerElement type="library" name="javax.servlet:jsp-api:2.0" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+          </containerElement>
+          <containerElement type="library" name="javax.servlet:servlet-api:2.4" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+          </containerElement>
+          <containerElement type="library" name="javax.transaction:jta:1.0.1B" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/jta-1.0.1B.jar" />
           </containerElement>
           <containerElement type="library" name="jboss:javassist:3.3.ga" level="module">
             <attribute name="method" value="1" />
@@ -121,33 +97,101 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/jboss-archive-browsing-5.0.0alpha-200607201-119.jar" />
           </containerElement>
-          <containerElement type="library" name="org.hibernate:hibernate-tools:3.2.0.beta9a" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/hibernate-tools-3.2.0.beta9a.jar" />
-          </containerElement>
-          <containerElement type="library" name="freemarker:freemarker:2.3.4" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/freemarker-2.3.4.jar" />
-          </containerElement>
-          <containerElement type="library" name="org.hibernate:jtidy:r8-20060801" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/jtidy-r8-20060801.jar" />
-          </containerElement>
-          <containerElement type="library" name="c3p0:c3p0:0.9.1" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/c3p0-0.9.1.jar" />
-          </containerElement>
-          <containerElement type="library" name="postgresql:postgresql:8.3-603.jdbc4" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/postgresql-8.3-603.jdbc4.jar" />
+          <containerElement type="library" name="junit:junit:3.8.1" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
           </containerElement>
           <containerElement type="library" name="log4j:log4j:1.2.13" level="module">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/log4j-1.2.13.jar" />
           </containerElement>
-          <containerElement type="module" name="finapp">
+          <containerElement type="library" name="net.sf.ehcache:ehcache:1.2.3" level="module">
             <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/classes" />
+            <attribute name="URI" value="/WEB-INF/lib/ehcache-1.2.3.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.directwebremoting:dwr:2.0.2" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/dwr-2.0.2.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.eclipse.jdt:core:3.1.1" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="org.hibernate:hibernate-annotations:3.2.1.ga" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/hibernate-annotations-3.2.1.ga.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.hibernate:hibernate-entitymanager:3.2.1.ga" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/hibernate-entitymanager-3.2.1.ga.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.hibernate:hibernate-tools:3.2.0.beta9a" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/hibernate-tools-3.2.0.beta9a.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.hibernate:hibernate:3.2.2.ga" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/hibernate-3.2.2.ga.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.hibernate:jtidy:r8-20060801" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/jtidy-r8-20060801.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.mortbay.jetty:jetty-util:6.1.9" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="org.mortbay.jetty:jetty:6.1.9" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="org.mortbay.jetty:jsp-2.1:6.1.9" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="org.mortbay.jetty:jsp-api-2.1:6.1.9" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+          </containerElement>
+          <containerElement type="library" name="org.mortbay.jetty:servlet-api-2.5:6.1.9" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-aop:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-aop-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-beans:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-beans-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-context-support:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-context-support-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-context:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-context-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-core:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-core-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-web:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-web-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-webmvc-portlet:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-webmvc-portlet-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="org.springframework:spring-webmvc:2.5.1" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/spring-webmvc-2.5.1.jar" />
+          </containerElement>
+          <containerElement type="library" name="postgresql:postgresql:8.3-603.jdbc4" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/postgresql-8.3-603.jdbc4.jar" />
           </containerElement>
         </packaging>
       </configuration>
@@ -155,10 +199,13 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <options>
-          <option name="enableValidation" value="false" />
+          <option name="enableValidation" value="true" />
           <option name="reportErrorsAsWarnings" value="true" />
         </options>
-        <customNs />
+        <customNs>
+          <enable>http://www.directwebremoting.org/schema/spring-dwr</enable>
+          <enable>http://www.springframework.org/schema/context</enable>
+        </customNs>
       </configuration>
     </facet>
   </component>
@@ -171,6 +218,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+      <excludeFolder url="file://$MODULE_DIR$/target/.svn" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/finapp" />
       <excludeFolder url="file://$MODULE_DIR$/target/war" />
@@ -708,6 +758,19 @@
         </JAVADOC>
         <SOURCES>
           <root url="jar://C:/Documents and Settings/Porus/.m2/repository/ant/ant/1.6.5/ant-1.6.5-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library name="flexjson:flexjson:1.6">
+        <CLASSES>
+          <root url="jar://C:/Documents and Settings/Porus/.m2/repository/flexjson/flexjson/1.6/flexjson-1.6.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://C:/Documents and Settings/Porus/.m2/repository/flexjson/flexjson/1.6/flexjson-1.6-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://C:/Documents and Settings/Porus/.m2/repository/flexjson/flexjson/1.6/flexjson-1.6-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
