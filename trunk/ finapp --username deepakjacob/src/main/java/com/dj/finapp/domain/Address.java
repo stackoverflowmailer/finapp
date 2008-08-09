@@ -1,7 +1,7 @@
 package com.dj.finapp.domain;
 
-import javax.persistence.Embeddable;
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 
 @Embeddable

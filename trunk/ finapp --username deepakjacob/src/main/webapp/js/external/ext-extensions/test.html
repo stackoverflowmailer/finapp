@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>This is a test page</title>
+<script type="text/javascript">
+	    	main = function (p){
+				this.person = p;
+				this.showName = function(){
+					console.log(this.person.firstName);
+				}
+			}
+			testFunction = function() {
+				var person = {
+					firstName:"Choo",
+					lastName:"Chee",
+					address:{
+						doorNo:"04/141",
+						streetNo:"A street name",
+						addressLine1:"An address Line 1",
+						addressLine2:"An address Line 2"
+					}
+				}
+				caller = new main(person);
+				caller.showName();
+			}	
+	</script>
+
+<script type="text/javascript">
+		Calculator = function(){
+			this.add = function(firstValue, secondValue){
+				return firstValue + secondValue;
+			}
+			this.subtract = function(firstValue, secondValue){
+				return firstValue - secondValue;
+			}			
+		}    		
+
+		User = function(){
+			this.useCalculator = function(firstValue, secondValue, operator){
+				calculatorObject = new Calculator();
+				var result = 0;
+				if(operator === '+'){
+					result = calculatorObject.add(firstValue, secondValue);
+				}else if(operator === '-'){
+					result = calculatorObject.subtract(firstValue, secondValue);
+				}
+				return result;
+			}
+		}
+
+		createUser = function(first, second, sign){
+			aUser = new User();
+			returnedValue =  aUser.useCalculator(first, second, sign);
+			console.log('returned value = '+ returnedValue);
+		}	
+		
+	</script>
+
+
+</head>
+<body>
+
+<input type="button" value="test" onclick="testFunction();">
+<input type="button" value="invoke calc" onclick="createUser(1,2,'-');">
+
+</body>
+</html>

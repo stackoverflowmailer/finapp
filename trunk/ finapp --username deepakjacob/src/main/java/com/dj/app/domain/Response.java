@@ -1,6 +1,5 @@
 package com.dj.app.domain;
 
-import java.io.Serializable;
 
 /**
  * User: Porus

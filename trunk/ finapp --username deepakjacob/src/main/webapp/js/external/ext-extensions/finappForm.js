@@ -1,4 +1,4 @@
-Ext.onReady(function() {
+Ext.onReady( function() {
 
 	Ext.QuickTips.init();
 	Ext.form.Field.prototype.msgTarget = 'side';
@@ -8,60 +8,55 @@ Ext.onReady(function() {
 	/*
 	 * ================ Simple form =======================
 	 */
-	var element = bd.createChild({
-		tag : 'h2',
-		html : 'Employee Form'
+	var element = bd.createChild( {
+		tag :'h2',
+		html :'Employee Form'
 	});
 	element.applyStyles('bgcolor:red');
 
-	var sampleForm = new Ext.FormPanel({
-		labelWidth : 75, // label settings here cascade unless overridden
+	var sampleForm = new Ext.FormPanel( {
+		labelWidth :75, // label settings here cascade unless overridden
 		// url:'save-form.php',
-		frame : true,
+		frame :true,
 		// title: 'Simple Form',
-		bodyStyle : 'padding:5px 5px 0',
-		width : 350,
+		bodyStyle :'padding:5px 5px 0',
+		width :350,
 		defaults : {
-			width : 230
+			width :230
 		},
-		defaultType : 'textfield',
-		border : false,
-		items : [{
-			fieldLabel : 'First Name',
-			name : 'firstName',
-			allowBlank : false
+		defaultType :'textfield',
+		border :false,
+		items : [ {
+			fieldLabel :'First Name',
+			name :'firstName',
+			allowBlank :false
 		}, {
-			fieldLabel : 'Last Name',
-			name : 'lastName'
+			fieldLabel :'Last Name',
+			name :'lastName'
 		}, {
-			fieldLabel : 'Salary',
-			name : 'salary'
+			fieldLabel :'Salary',
+			name :'salary'
 		}, {
-			fieldLabel : 'Email',
-			name : 'email',
-			vtype : 'email'
+			fieldLabel :'Email',
+			name :'email',
+			vtype :'email'
 		},
 
-		new Ext.form.TimeField({
-			fieldLabel : 'Time',
-			name : 'time',
-			minValue : '8:00am',
-			maxValue : '6:00pm'
-		})]
+		new Ext.form.TimeField( {
+			fieldLabel :'Time',
+			name :'time',
+			minValue :'8:00am',
+			maxValue :'6:00pm'
+		}) ]
 	});
 
-	var submit = sampleForm.addButton({
-		text : 'Save',
-		disable : false,
+	var submit = sampleForm.addButton( {
+		text :'Save',
+		disable :false,
 
 		handler : function() {
 			sampleForm.getForm().doAction("dwrsubmit", {
-				dwrFunction : Employee.saveEmployee,
-				// this callback will never get called as DWRSubmit is not
-				// considering following callback.
-				// DWRSubmit is having it's own callbacks viz. 'success' and
-				// 'failure'
-				// to use following callback change DWRSubmit action.
+				dwrFunction :Employee.saveEmployee,
 				callback : function(str) {
 					alert('In Callback !' + str);
 				}
