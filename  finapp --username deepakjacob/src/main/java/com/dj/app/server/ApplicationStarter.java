@@ -28,5 +28,5 @@ public class ApplicationStarter {
 		server.addHandler(new WebAppContext("src/main/webapp", "/finapp"));
 		server.start();
 
-	}
+    }
 }
