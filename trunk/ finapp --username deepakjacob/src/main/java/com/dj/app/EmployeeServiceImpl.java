@@ -23,7 +23,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 	List<Employee> empList = new ArrayList<Employee>();
 	// Add employees to the list
 	empList.add(new Employee(new Long(1), "Deepak", "Jacob", new BigDecimal("100000.33")));
-	empList.add(new Employee(new Long(77), "Mukesh", "Dubey", new BigDecimal("100000.33")));
 	empList.add(new Employee(new Long(2), "Pradeep", "K", new BigDecimal("10066600.33")));
 	if (log.isDebugEnabled()) {
 	    log.debug(empList);
