@@ -1,17 +1,19 @@
 package com.dj.app.server;
 
-import com.dj.finapp.domain.Account;
-import com.dj.finapp.domain.AccountHolder;
-import com.dj.finapp.domain.Address;
-import com.dj.finapp.domain.PhoneNumber;
-
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.ArrayList;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.dj.finapp.domain.Account;
+import com.dj.finapp.domain.AccountHolder;
+import com.dj.finapp.domain.AccountType;
+import com.dj.finapp.domain.Address;
+import com.dj.finapp.domain.PhoneNumber;
 
 /**
  * Created by IntelliJ IDEA. User: Jacob Date: Jul 13, 2008 Time: 1:38:15 PM To
@@ -25,7 +27,7 @@ public class AccountTest {
     AccountTest() {
 	final Account account = new Account();
 	account.setId(new Long(1000));
-	account.setAccountType(Account.AccountType.SAVINGS);
+	account.setAccountType(AccountType.SAVINGS);
 	account.setBalance(new BigDecimal("1000.00"));
 	account.setCloseDate(new Date());
 	account.setOpenDate(new Date());
