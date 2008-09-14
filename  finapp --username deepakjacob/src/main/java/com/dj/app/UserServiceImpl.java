@@ -22,7 +22,8 @@ public class UserServiceImpl implements UserService {
 	    Map<String, String> errors = new HashMap<String, String>();
 	    errors.put("username", "Invalid username");
 	    errors.put("password", "Invalid password");
-	    response = new EXTFormSubmitResponse(null, errors, false, "Please correct validation errors");
+	    response = new EXTFormSubmitResponse(null, errors, false, 
+		    "Please correct validation errors");
 	}
 	return response;
     }

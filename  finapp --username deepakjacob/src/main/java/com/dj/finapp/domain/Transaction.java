@@ -1,6 +1,7 @@
 package com.dj.finapp.domain;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +12,7 @@ public class Transaction {
     @Id
     private Long id;
     @Column(name = "TXN_DATE")
-    private String date;
+    private Date date;
     @Column(name = "TXN_TYPE")
     private TransactionType type;
     @Column(name = "BALANCE_AFTER_TXN")
@@ -27,11 +28,11 @@ public class Transaction {
 	this.id = id;
     }
 
-    public String getDate() {
+    public Date getDate() {
 	return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
 	this.date = date;
     }
 
