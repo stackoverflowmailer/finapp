@@ -2,6 +2,6 @@ package com.dj.finapp.domain;
 
 public enum TransactionType {
 
-    CREDIT, DEBIT;
+    CREDIT, DEBIT, CHECK_BALANCE, TRANSFER_CREDIT;           
 
 }
