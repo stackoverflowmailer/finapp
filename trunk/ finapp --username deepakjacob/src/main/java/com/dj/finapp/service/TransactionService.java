@@ -8,11 +8,21 @@ import java.math.BigDecimal;
 
 
 /**
- * Defines the operations that can be performed on an Account object.
+ * Defines operations that can be performed on an Account object.
  *
  * @author Porus
  */
 public interface TransactionService {
+
+    /**
+     * Return an instance of an account having the provided account number.
+     *
+     * @param accountNumber the account number.
+     * @return an instance of an account having the provided account number.
+     * @throws NoAccountFoundException if no account exists with the provided account number.
+     */
+    public Account findAccount(String accountNumber) throws NoAccountFoundException;
+
 
     /**
      * Credit the provided amount to this account.
@@ -48,4 +58,13 @@ public interface TransactionService {
      * @throws InvalidAccountException if account is invalid or not active.
      */
     public Transaction createTransactionEntry(Account account, TransactionType transactionType) throws InvalidAccountException;
+
+    /**
+     * Get the current account balance.
+     *
+     * @param account the account for which the balance has to be returned.
+     * @return the current account balance
+     * @throws InvalidAccountException if the account is not valid.
+     */
+    public BigDecimal getAccountBalance(Account account) throws InvalidAccountException;
 }
