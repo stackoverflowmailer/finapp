@@ -16,6 +16,10 @@ public class TransactionServiceImpl implements TransactionService {
     private static final Log logger = LogFactory.getLog(TransactionServiceImpl.class);
 
 
+    public Account findAccount(String accountNumber) throws NoAccountFoundException {
+        return null;  
+    }
+
     public Account credit(Account account, BigDecimal amount) throws InvalidAccountException {
         account.credit(amount);
         if (logger.isInfoEnabled()) {
@@ -26,9 +30,9 @@ public class TransactionServiceImpl implements TransactionService {
         return account;
     }
 
-    // TODO: This methos has be moved from here to a generic method
     /**
      * Saves an entity.
+     * TODO: Move to a generic method
      *
      * @param account the account to be saved.
      */
@@ -49,6 +53,10 @@ public class TransactionServiceImpl implements TransactionService {
 
     public Transaction createTransactionEntry(Account account, TransactionType transactionType) throws InvalidAccountException {
         return account.createTransactionRecord(transactionType);
+    }
+
+    public BigDecimal getAccountBalance(Account account) throws InvalidAccountException {
+        return account.getBalance();
     }
 
 
