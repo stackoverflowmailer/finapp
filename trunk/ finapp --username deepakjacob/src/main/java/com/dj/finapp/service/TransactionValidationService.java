@@ -4,7 +4,7 @@ import com.dj.finapp.domain.Account;
 
 /**
  * Provides validation services on an account.  Ideally this class's methods may be
- * invoked from  interceptor's so that other modification won't impact validation services.
+ * invoked from  interceptors so that other modifications won't impact validation services.
  *
  * @author Porus
  */
