@@ -21,8 +21,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> getAllEmployees() {
         List<Employee> empList = new ArrayList<Employee>();
         // Add employees to the list
-        empList.add(new Employee(new Long(1), "Deepak", "Jacob", new BigDecimal("100000.33")));
-        empList.add(new Employee(new Long(2), "Pradeep", "K", new BigDecimal("10066600.33")));
+        empList.add(new Employee((long) 1, "Deepak", "Jacob", new BigDecimal("100000.33")));
+        empList.add(new Employee((long) 2, "Pradeep", "K", new BigDecimal("10066600.33")));
         if (log.isDebugEnabled()) {
             log.debug(empList);
         }
@@ -41,23 +41,23 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     public List<Employee> getEmployeeWithName(String name) {
-        Employee employee = null;
+        Employee employee;
         List<Employee> empList = new ArrayList<Employee>();
         if (name.equals("Deepak")) {
-            employee = new Employee(new Long(1), "Deepak", "Jacob", new BigDecimal("100000.33"));
+            employee = new Employee((long) 1, "Deepak", "Jacob", new BigDecimal("100000.33"));
         } else {
-            employee = new Employee(new Long(2), "Maneesh", "Kumar", new BigDecimal("100000.33"));
+            employee = new Employee((long) 2, "Maneesh", "Kumar", new BigDecimal("100000.33"));
         }
         empList.add(employee);
         return empList;
     }
 
     public Employee getEmployee(String name) {
-        Employee employee = null;
+        Employee employee;
         if (name.equals("Deepak")) {
-            employee = new Employee(Long.valueOf(1), "Deepak", "Jacob", new BigDecimal("100000.33"));
+            employee = new Employee((long) 1, "Deepak", "Jacob", new BigDecimal("100000.33"));
         } else {
-            employee = new Employee(new Long(2), "Mukesh", "Dubey", new BigDecimal("100000.33"));
+            employee = new Employee((long) 2, "Mukesh", "Dubey", new BigDecimal("100000.33"));
         }
         return employee;
     }
