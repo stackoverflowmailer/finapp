@@ -79,6 +79,11 @@
 <!-- end viewport -->
 
 
+        <script type="text/javascript"
+
+                    src="<%=request.getContextPath()%>/js/external/ext-extensions/finappMenuTree.js"></script>
+
+
 </body>
 </html>
 

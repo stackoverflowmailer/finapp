@@ -13,7 +13,7 @@ public interface GenericService<T, PK extends Serializable> {
 
     public T find(PK id);
 
-    public T save(T t);
+    public void save(T t);
 
     public T update(T t);
 

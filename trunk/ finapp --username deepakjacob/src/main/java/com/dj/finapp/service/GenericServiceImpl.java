@@ -1,5 +1,7 @@
 package com.dj.finapp.service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 
 /**
@@ -7,8 +9,11 @@ import java.io.Serializable;
  */
 public class GenericServiceImpl<T, PK extends Serializable> implements GenericService<T, PK> {
 
+    @PersistenceContext
+    private EntityManager entityManager;
+
     public T find(PK id) {
-        return null;
+        return (T) entityManager.find(Object.class,id);
     }
 
     /**
@@ -17,8 +22,8 @@ public class GenericServiceImpl<T, PK extends Serializable> implements GenericSe
      * @param t
      * @return
      */
-    public T save(T t) {
-        return null;
+    public void save(T t) {
+        return;
     }
 
     public T update(T t) {

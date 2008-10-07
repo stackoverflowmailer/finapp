@@ -26,7 +26,7 @@ public class AccountTest {
 
     AccountTest() {
 	final Account account = new Account();
-	account.setId(new Long(1000));
+	account.setId(1000l);
 	account.setAccountType(AccountType.SAVINGS);
 	account.setBalance(new BigDecimal("1000.00"));
 	account.setCloseDate(new Date());
