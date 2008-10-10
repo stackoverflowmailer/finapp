@@ -34,6 +34,10 @@ Ext.onReady(function() {
                         children: [{
                             text: 'one',
                             leaf: true
+                        },{
+                            text: 'Deepak',
+                            leaf:true
+                            //expanded: false
                         }]
                     }]
                 })
@@ -50,7 +54,7 @@ Ext.onReady(function() {
     var tree = new FinappMenuTreePanel();
 
     tree.on('click', function(node, e) {
-        debugger;
+        debugger;    
     }, this);
 
 
