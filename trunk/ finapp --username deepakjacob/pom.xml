@@ -37,7 +37,9 @@
 							</includes>
 						</scanTargetPattern>
 					</scanTargetPatterns>
-				</configuration>
+                    <webDefaultXml>src/main/resources/webdefault.xml</webDefaultXml>
+                    
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
