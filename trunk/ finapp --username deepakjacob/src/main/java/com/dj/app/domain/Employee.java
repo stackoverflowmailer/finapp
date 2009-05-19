@@ -4,11 +4,7 @@ import java.math.BigDecimal;
 
 /**
  * 
- * @version $Rev$ $Date$ $Author$
- * 
- *          Created by IntelliJ IDEA. User: Jacob Date: Mar 14, 2008 Time:
- *          11:18:43 PM To change this template use File | Settings | File
- *          Templates.
+ * @version $Id$
  */
 public class Employee {
 	private Long id;
