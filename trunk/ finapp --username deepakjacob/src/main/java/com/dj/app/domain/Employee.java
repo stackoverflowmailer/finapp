@@ -3,85 +3,81 @@ package com.dj.app.domain;
 import java.math.BigDecimal;
 
 /**
- * Created by IntelliJ IDEA.
- * User: Jacob
- * Date: Mar 14, 2008
- * Time: 11:18:43 PM
- * To change this template use File | Settings | File Templates.
+ * 
+ * @version $$Rev$$ $$Date$$
+ * 
+ *          Created by IntelliJ IDEA. User: Jacob Date: Mar 14, 2008 Time:
+ *          11:18:43 PM To change this template use File | Settings | File
+ *          Templates.
  */
 public class Employee {
-    private Long id;
+	private Long id;
 
-    private String firstName;
+	private String firstName;
 
-    private String lastName;
+	private String lastName;
 
-    private BigDecimal salary;
+	private BigDecimal salary;
 
+	private String emailAddress;
 
-    private String emailAddress;
+	public Employee() {
 
+	}
 
-    public String getEmailAddress() {
-        return emailAddress;
-    }
+	public Employee(final Long id, final String firstName,
+			final String lastName, final BigDecimal salary) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.salary = salary;
+	}
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+	public String getEmailAddress() {
+		return this.emailAddress;
+	}
 
-    public Employee() {
+	public String getFirstName() {
+		return this.firstName;
+	}
 
-    }
+	public Long getId() {
+		return this.id;
+	}
 
-    public Employee(Long id, String firstName, String lastName, BigDecimal salary) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.salary = salary;
-    }
+	public String getLastName() {
+		return this.lastName;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public BigDecimal getSalary() {
+		return this.salary;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setEmailAddress(final String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public void setFirstName(final String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setId(final Long id) {
+		this.id = id;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public void setLastName(final String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setSalary(final BigDecimal salary) {
+		this.salary = salary;
+	}
 
-    public BigDecimal getSalary() {
-        return salary;
-    }
-
-    public void setSalary(BigDecimal salary) {
-        this.salary = salary;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", salary=" + salary +
-                ", emailAddress='" + emailAddress + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Employee{" + "id=" + this.id + ", firstName='" + this.firstName
+				+ '\'' + ", lastName='" + this.lastName + '\'' + ", salary="
+				+ this.salary + ", emailAddress='" + this.emailAddress + '\''
+				+ '}';
+	}
 }
