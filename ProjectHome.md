@@ -1,0 +1,1 @@
+A project involving DWR 2.0.1,Spring MVC 2.5.1 with annotations
